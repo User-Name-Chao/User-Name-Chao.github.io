@@ -54,34 +54,22 @@
 <body class="home-template">
 <nav class="navbar navbar-inverse" id="top">
     <div class="container-fluid">
-        {% if not is_login %}
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">欢迎登录！</a>
+                <a class="navbar-brand" href="#">欢迎！</a>
             </div>
-        {% else %}
-            <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'PP:loginout' %}">退出！</a>
-            </div>
-        {% endif %}
+
         <ul class="nav navbar-nav navbar-right">
-            {% if not is_login %}
+
                 <li>
-                    <a href="{% url 'PP:regist' %}">注册</a>
-                </li>
-                <li>
-                    <a href="{% url 'PP:login' %}">登陆</a>
-                </li>
-            {% else %}
-                <li>
-                    <a class="icon" href="#">
-                        <img width="40" height="40" class="img-circle" alt="" src="{{ icon }}"/>
-                    </a>
+                    <a href="">zhangchao</a>
                 </li>
 
                 <li>
-                    <a href=""><span>{{ username }}</span></a>
+                    <a class="icon" href="#">
+                        <img width="40" height="40" class="img-circle" alt="" src="static/uploadfiles/icons/2018-09-04_115122.jpg"/>
+                    </a>
                 </li>
-            {% endif %}
+
         </ul>
     </div>
 
