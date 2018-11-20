@@ -145,9 +145,9 @@ pre {
 	text-decoration: none
 }
 
-.main-header .branding img {
-	max-width: 100%
-}
+/*.main-header .branding img {*/
+	/*max-width: 100%*/
+/*}*/
 
 .main-header h1 {
 	color: #fff
