@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.0.0/styles/vs.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/pp/css/body.css">
+    <script src="https://hm.baidu.com/hm.js?c8d13872a523d9c286aa7affbe0921f1"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?c8d13872a523d9c286aa7affbe0921f1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <style id="fit-vids-style">
+
+        .fluid-width-video-wrapper {
+            width: 100%;
+            position: relative;
+            padding: 0;
+        }
+
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper object,
+        .fluid-width-video-wrapper embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-header {
+            margin-top: 0px;
+        }
+
+        #top {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body class="home-template">
+<nav class="navbar navbar-inverse" id="top">
+    <div class="container-fluid">
+        {% if not is_login %}
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">欢迎登录！</a>
+            </div>
+        {% else %}
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'PP:loginout' %}">退出！</a>
+            </div>
+        {% endif %}
+        <ul class="nav navbar-nav navbar-right">
+            {% if not is_login %}
+                <li>
+                    <a href="{% url 'PP:regist' %}">注册</a>
+                </li>
+                <li>
+                    <a href="{% url 'PP:login' %}">登陆</a>
+                </li>
+            {% else %}
+                <li>
+                    <a class="icon" href="#">
+                        <img width="40" height="40" class="img-circle" alt="" src="{{ icon }}"/>
+                    </a>
+                </li>
+
+                <li>
+                    <a href=""><span>{{ username }}</span></a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+
+</nav>
+<header class="main-header">
+
+    <img src="http://p0.ifengimg.com/pmop/2018/0311/63E7F8BB1673ED82D4C03E8D068110C219253652_size11_w495_h274.jpeg"
+         alt=""/>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1><span class="hide">Laravel - </span>立志成为Python全栈工程师</h1>
+                <h2 class="hide">PHP THAT DOESN'T HURT. CODE HAPPY &amp; ENJOY THE FRESH AIR.</h2><img
+                    src="http://image.golaravel.com/e/b0/4e4bd788405aab87f03d26edc4ab4.png" alt="Laravel" class="hide">
+            </div>
+
+        </div>
+    </div>
+</header>
+<nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse"
+                                                 data-target="#main-menu"><span class="sr-only">Toggle navigation</span> <i
+                        class="fa fa-bars"></i></span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        <li role="presentation">
+                            <a href="index.html" title="首页">常用网站</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="https://blog.csdn.net/" title="csdn博客" target="_blank"
+                               onclick="_hmt.push(['_trackEvent', 'main-navigation', 'click', 'csdn博客'])">csdn博客</a>
+                        </li>
+                        <li role="presentation" style="font-weight: bold">
+                            <a href="http://www.runoob.com/" title="菜鸟教程" target="_blank"
+                               onclick="_hmt.push(['_trackEvent', 'main-navigation', 'click', '菜鸟教程'])">菜鸟教程</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="https://www.cnblogs.com/" title="博客园" target="_blank"
+                               onclick="_hmt.push(['_trackEvent', 'main-navigation', 'click', '博客园'])">博客园</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="https://github.com/" title="GitHub" target="_blank"
+                               onclick="_hmt.push(['_trackEvent', 'main-navigation', 'click', 'GitHub'])">GitHub官网</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="http://wenda.golaravel.com/" title="问答社区" target="_blank"
+                               onclick="_hmt.push(['_trackEvent', 'main-navigation', 'click', '问答社区'])">问答社区</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="content-wrap">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-8 main-content">
+                <article class="post">
+                    <div class="post-head">
+                        <h1 class="post-title"><a href="/post/laravel-5-6-is-now-released/">个人信息</a></h1>
+                    </div>
+                    <div class="featured-media">
+                        <a href="/post/laravel-5-6-is-now-released/"><img src="/assets/images/laravel-5.6.png"
+                                                                          alt="Laravel 5.6 版本正式发布"></a>
+                    </div>
+                    <div class="post-content">
+                        <p></p>
+                        <p>Laravel 5.6 是继 5.5 之后 Laravel 官方发布的最新版本。此版本包含众多新特性，接下来我们说一说几个重要的特性。如需查看完成的发布日志，请点击
+                            <a href="https://github.com/laravel/framework/blob/5.6/CHANGELOG-5.6.md">这里</a>。</p>
+                        <p></p>
+                    </div>
+                    <div class="post-permalink">
+                        <a href="/post/laravel-5-6-is-now-released/" class="btn btn-default">阅读全文</a>
+                    </div>
+                    <footer class="post-footer clearfix"></footer>
+                </article>
+
+
+                <article class="post">
+                    <div class="post-head">
+                        <h1 class="post-title"><a href="/post/laravel-5-5-will-be-the-next-lts-release/">个人经历</a></h1>
+                        <div class="post-meta"><span class="author">作者：<a href="https://www.bootcss.com/"
+                                                                          target="_blank">王赛</a></span> •
+                            <time class="post-date" datetime="February 20, 2017 7:21 PM"
+                                  title="February 20, 2017 7:21 PM">2017年02月20日
+                            </time>
+                        </div>
+                    </div>
+                    <div class="featured-media">
+                        <a href="/post/laravel-5-5-will-be-the-next-lts-release/"><img
+                                src="http://image.golaravel.com/b/60/0540baaed781628b02aac992d1c8f.png"
+                                alt="Laravel 5.5 将是下一个 LTS 版本，预计 7/8 月份发布"></a>
+                    </div>
+                    <div class="post-content">
+                        <p></p>
+                        <p>Laravel 的上一个 LTS（长期支持）版本是 Laravel 5.1，发布于 2015 年 6 月，按照对 LTS 版本的约定，两年的 bug
+                            修复支持到今年中旬就结束了，所以今年中旬必然要出一个 LTS 后继版本，就是 Laravel 5.5。</p>
+                        <p></p>
+                    </div>
+                    <div class="post-permalink">
+                        <a href="/post/laravel-5-5-will-be-the-next-lts-release/" class="btn btn-default">阅读全文</a>
+                    </div>
+                    <footer class="post-footer clearfix"></footer>
+                </article>
+
+
+                <article class="post">
+                    <div class="post-head">
+                        <h1 class="post-title"><a href="/post/laravel-5-4-is-now-released/">个人能力</a></h1>
+                        <div class="post-meta"><span class="author">作者：<a href="https://www.bootcss.com/"
+                                                                          target="_blank">王赛</a></span> •
+                            <time class="post-date" datetime="January 24, 2017 9:23 PM"
+                                  title="January 24, 2017 9:23 PM">2017年01月24日
+                            </time>
+                        </div>
+                    </div>
+                    <div class="featured-media">
+                        <a href="/post/laravel-5-4-is-now-released/"><img
+                                src="http://image.golaravel.com/f/48/7a406073b512ef16a891127824c7b.jpg"
+                                alt="Laravel 5.4 版本正式发布"></a>
+                    </div>
+                    <div class="post-content">
+                        <p></p>
+                        <p>Laravel 5.4 版本正式发布了！这一版本带来了很多新特性以及对原有功能的提升。</p>
+                        <p></p>
+                    </div>
+                    <div class="post-permalink">
+                        <a href="/post/laravel-5-4-is-now-released/" class="btn btn-default">阅读全文</a>
+                    </div>
+                    <footer class="post-footer clearfix"></footer>
+                </article>
+
+
+                <article class="post">
+                    <div class="post-head">
+                        <h1 class="post-title"><a href="/post/benchmarking-laravel-symfony-zend/">兴趣爱好</a></h1>
+                        <div class="post-meta"><span class="author">作者：<a href="https://www.bootcss.com/"
+                                                                          target="_blank">王赛</a></span> •
+                            <time class="post-date" datetime="January 12, 2017 6:13 PM"
+                                  title="January 12, 2017 6:13 PM">2017年01月12日
+                            </time>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p></p>
+                        <p>网上充斥着各式各样的 PHP 框架性能对比的文章。然而，他们总是把“苹果”和“橘子”做对比（看上去有点儿像，都是圆的，但其实不是一码事）。这次，我将着重对 Laravel、Symfony
+                            和 Zend 这三个框架做性能对比，并且还要说明为什么这三个框架总是被错误的进行比较。</p>
+                        <p></p>
+                    </div>
+                    <div class="post-permalink">
+                        <a href="/post/benchmarking-laravel-symfony-zend/" class="btn btn-default">阅读全文</a>
+                    </div>
+                    <footer class="post-footer clearfix"></footer>
+                </article>
+
+
+                <article class="post">
+                    <div class="post-head">
+                        <h1 class="post-title"><a href="/post/laravel-5-3-is-now-released/">自我简介</a></h1>
+                        <div class="post-meta"><span class="author">作者：<a href="https://www.bootcss.com/"
+                                                                          target="_blank">王赛</a></span> •
+                            <time class="post-date" datetime="August 23, 2016 6:04 PM" title="August 23, 2016 6:04 PM">
+                                2016年08月23日
+                            </time>
+                        </div>
+                    </div>
+                    <div class="featured-media">
+                        <a href="/post/laravel-5-3-is-now-released/"><img
+                                src="http://image.golaravel.com/9/a9/c367f99a8366ca86f7b889da25022.png"
+                                alt="Laravel 5.3 正式发布"></a>
+                    </div>
+                    <div class="post-content">
+                        <p></p>
+                        <p>Laravel 项目组自豪地宣布 Laravel 5.3
+                            <a href="https://laravel.com/docs/5.3">正式发布了</a> ！5.3
+                            版本中的新增特性主要集中在提升开发速度，通过增强常见任务的开箱即用功能提升开发效率。</p>
+                        <p></p>
+                    </div>
+                    <div class="post-permalink">
+                        <a href="/post/laravel-5-3-is-now-released/" class="btn btn-default">阅读全文</a>
+                    </div>
+                    <footer class="post-footer clearfix"></footer>
+                </article>
+
+            </main>
+            <aside class="col-md-4 sidebar">
+                <div class="widget">
+                    <h4 class="title">照片</h4>
+                    <div class="content community">
+                        <p>
+                            <!--<img src="http://stu.1000phone.net/Uploads/assets/2018-07-16/5b4bf91333691.PNG" alt="" />-->
+                        </p>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h4 class="title">联系方式</h4>
+                    <div class="content download">
+                        <p>QQ：1371607399</p>
+                        <p>Phone：15736736120</p>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h4 class="title">项目</h4>
+                    <a href="https://docs.golaravel.com/docs/5.6/" class="btn btn-default btn-block" target="_blank">5.6
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/5.5/" class="btn btn-default btn-block" target="_blank">5.5
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/5.4/" class="btn btn-default btn-block" target="_blank">5.4
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/5.3/" class="btn btn-default btn-block" target="_blank">5.3
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/5.2/" class="btn btn-default btn-block" target="_blank">5.2
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/5.1/" class="btn btn-default btn-block" target="_blank">5.1
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/5.0/" class="btn btn-default btn-block" target="_blank">5.0
+                        文档</a>
+                    <a href="https://docs.golaravel.com/docs/4.2/" class="btn btn-default btn-block" target="_blank">4.2
+                        中文文档</a>
+                    <a href="https://docs.golaravel.com/docs/4.1/" class="btn btn-default btn-block" target="_blank">4.1
+                        中文文档</a>
+                    <a href="https://docs.golaravel.com/docs/4.0/" class="btn btn-default btn-block" target="_blank">4.0
+                        中文文档</a>
+                    <a href="https://lumen.golaravel.com/docs/" class="btn btn-default btn-block" target="_blank">Lumen
+                        中文文档</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<nav class="navbar navbar-inverse" id="footer">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">谢谢！</a>
+    </div>
+    <a class="nav navbar-nav navbar-right" href="#" id="back-to-top" style="display: block;margin-bottom: inherit;"><i
+            class="fa fa-angle-up"></i></a>
+</nav>
+<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.0.0/highlight.min.js"></script>
+<script src="/assets/js/main.min.js?1530120249519"></script>
+</body>
+
+</html>
