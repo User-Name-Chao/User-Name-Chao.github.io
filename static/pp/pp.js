@@ -1,5 +1,5 @@
 setInterval(function() {
-	var donghua = document.querySelector(".huadong");
+	var donghua = document.querySelector(".donghua");
 	var sel = document.querySelector("#sel");
 	if(sel.nextElementSibling != null) {
 		sel.id = "";
