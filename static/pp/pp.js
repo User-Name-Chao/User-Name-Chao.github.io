@@ -1,5 +1,5 @@
 setInterval(function() {
-	var donghua = document.querySelector(".donghua");
+	var donghua = document.querySelector(".huadong");
 	var sel = document.querySelector("#sel");
 	if(sel.nextElementSibling != null) {
 		sel.id = "";
@@ -20,7 +20,7 @@ setInterval(function() {
 }, 3000)
 
 // 这是打印机效果
-var s = 'add your description here';
+var s = 'I want to join your company';
 var con = document.querySelector('.slider2');
 var index = 0;
 var length = s.length;
