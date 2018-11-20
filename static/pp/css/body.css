@@ -130,20 +130,20 @@ pre {
 	text-shadow: none
 }
 
-.main-header {
+/* .main-header {
 	text-align: center;
 	padding: 42px 0;
 	background: #f4645f
-}
+} */
 
 .main-header .branding {
 	font-size: 3.5em;
 	color: #303030
 }
 
-.main-header .branding:hover {
+/* .main-header .branding:hover {
 	text-decoration: none
-}
+} */
 
 /*.main-header .branding img {*/
 	/*max-width: 100%*/
